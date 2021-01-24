@@ -20,7 +20,6 @@ export default async (req, res) => {
     const rowsFilter = rows.map(item => {
         return {servico: item.servico, minAtendimento: item.minutosAtendimento}
     })
-    console.log(rowsFilter)
 
     res.send(JSON.stringify(rowsFilter))
 }

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { set } from "date-fns";
 
 export async function getStaticProps(context) {
-  const res = await fetch('http://localhost:3001/api/get-servico')
+  const res = await fetch(`${process.env.HOST}/api/get-servico`)
   const data = await res.json()
   if(!res) {
     return {
