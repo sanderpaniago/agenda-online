@@ -1,23 +1,26 @@
 import Input from "../components/Input";
 import { useState } from "react";
-import { set } from "date-fns";
+import absoluteUrl from "next-absolute-url";
 
-export async function getStaticProps(context) {
-  const res = await fetch(`${process.env.HOST}/api/get-servico`)
-  const data = await res.json()
-  if(!res) {
-    return {
-      notFound: true
-    }
-  }
+// export async function getStaticProps(context) {
+//   const res = await fetch(`${process.env.HOST}/api/get-servico`)
+//   const data = await res.json()
+//   if(!res) {
+//     return {
+//       notFound: true
+//     }
+//   }
 
-  return {
-    props: {
-      servicosList: data
-    }
-  }
+//   return {
+//     props: {
+//       servicosList: data
+//     }
+//   }
 
-}
+// }
+
+
+
 
 export default function Home({servicosList}) {
   const [name, setName] = useState('')
@@ -86,9 +89,11 @@ export default function Home({servicosList}) {
                   <label className='text-blue-900 font-medium' htmlFor="">Selecione o serviço desejado</label>
                   <select className='bg-gray-100 h-12 p-4 rounded' value={servico} onChange={e=> setServico(e.target.value)}>
                     <option value='' selected disabled hiddem>Selecione o Servico</option>
-                    {servicosList.map((item, key) => {
-                      return <option key={key} value={item.servico}>{item.servico}</option>
-                    })}
+                    {servicosList && (
+                      servicosList.map((item, key) => {
+                        return <option key={key} value={item.servico}>{item.servico}</option>
+                      }))
+                    }
                   </select>
                 </div>
                 
@@ -115,4 +120,13 @@ export default function Home({servicosList}) {
       </main>
     </div>
   )
+}
+
+Home.getInitialProps = async ({ req }) =>{
+ 
+
+  const res = await fetch(`http://127.0.0.1:3000/api/get-servico`)
+   const data = await res.json()
+
+  return {servicosList: data }
 }
