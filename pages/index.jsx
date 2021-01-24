@@ -1,26 +1,5 @@
 import Input from "../components/Input";
 import { useState } from "react";
-import absoluteUrl from "next-absolute-url";
-
-// export async function getStaticProps(context) {
-//   const res = await fetch(`${process.env.HOST}/api/get-servico`)
-//   const data = await res.json()
-//   if(!res) {
-//     return {
-//       notFound: true
-//     }
-//   }
-
-//   return {
-//     props: {
-//       servicosList: data
-//     }
-//   }
-
-// }
-
-
-
 
 export default function Home({servicosList}) {
   const [name, setName] = useState('')
