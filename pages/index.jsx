@@ -104,7 +104,7 @@ export default function Home({servicosList}) {
 Home.getInitialProps = async ({ req }) =>{
  
 
-  const res = await fetch(`http://127.0.0.1:3000/api/get-servico`)
+  const res = await fetch(`http://agendaonline.sanderpaniago.dev/api/get-servico`)
    const data = await res.json()
 
   return {servicosList: data }
