@@ -54,19 +54,19 @@ export default function Home({servicosList}) {
       </header>
 
       <main>
-        <div className=''>
-            <form onSubmit={handleSubmit} className='bg-gray-50 max-w-screen-lg shadow-lg m-auto flex justify-between p-8 rounded-xl'>
-              <div className='w-5/12'>
+        <div className='mt-56 md:mt-0 w-11/12 mx-auto'>
+            <form onSubmit={handleSubmit} className='flex-col bg-gray-50 max-w-screen-lg shadow-lg m-auto md:flex-row flex justify-between p-8 rounded-xl'>
+              <div className='w-full md:w-5/12'>
                 <Input name='nome' type="text" placeholder='Digite seu nome...' name='Nome' value={name} onChange={ e => setName(e.target.value)}/>
                 
-                <div className='flex flex-col mb-4'>
+                <div className='flex flex-col  mb-4'>
                   <label className='text-blue-900 font-medium' htmlFor="">Selecione seu horario</label>
                   <input className='bg-gray-100 h-12 p-4 rounded' type='datetime-local' value={data} onChange={e => setData(e.target.value)} />
                     
                 </div>
                 <div className='flex flex-col mb-4'>
                   <label className='text-blue-900 font-medium' htmlFor="">Selecione o serviço desejado</label>
-                  <select className='bg-gray-100 h-12 p-4 rounded' value={servico} onChange={e=> setServico(e.target.value)}>
+                  <select className='bg-gray-100 h-12 p-4 rounded' defaultValue='' value={servico} onChange={e=> setServico(e.target.value)}>
                     <option value='' selected disabled hiddem>Selecione o Servico</option>
                     {servicosList && (
                       servicosList.map((item, key) => {
@@ -77,7 +77,7 @@ export default function Home({servicosList}) {
                 </div>
                 
               </div>
-              <div className=' bg-gray-200 w-1/2 rounded-lg px-8 pt-4 shadow-xl relative'>
+              <div className=' bg-gray-200 w-full md:w-1/2 rounded-lg px-8 pt-4 shadow-xl relative'>
                 <div className='flex justify-between mt-4'>
                   <p className='text-blue-900 font-bold'>Agendamento</p>
                   <span>{data}</span>
@@ -91,7 +91,7 @@ export default function Home({servicosList}) {
                   <p>{servico}</p>
                 </div>
 
-                <button className='h-12 bg-blue-500 px-2 text-white font-bold rounded absolute right-6 bottom-4'>Confimar agendamento</button>
+                <button className='h-12 my-5 bg-blue-500 px-2 text-white font-bold rounded md:absolute md:right-6 md:bottom-4'>Confimar agendamento</button>
               </div>
             </form>
 
