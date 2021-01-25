@@ -55,7 +55,7 @@ para acessar o layout do projeto [click aqui](https://www.figma.com/file/zpJxwd2
 
 ## 🚀 Build
 
-link para a [demo](https://agendaonline.sanderpaniago.vercel.app/)
+link para a [demo](https://agendaonline.sanderpaniago.dev/)
 
 ## 🗝 licenças
 
