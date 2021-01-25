@@ -14,7 +14,7 @@ esse projeto foi desenvolvido com:
 
 ## 💻 Projeto
 
-O projeto tem como objetivo ajudar o clinete a fazer a criação de compromissos no google agenda do empreededor, apos informar o nome, data, hora e o tipo do servico, O cliente pode efetuar o agendamento. Os serviços vem direto de uma planilha do google sheets tornando essa parte do aplicativo dinamica.
+O projeto tem como objetivo ajudar o cliente a fazer a criação de agendamentos no google agenda do empreededor, apos informar o nome, data, hora e o tipo do servico, o cliente pode efetuar o agendamento. Os serviços vem direto de uma planilha do google sheets tornando essa parte do aplicativo dinamica.
 
 ## 📝 Pré-requisitos:
 
