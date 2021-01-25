@@ -72,7 +72,7 @@ export default function Home({servicosList}) {
               <div className=' bg-gray-200 w-full md:w-1/2 rounded-lg px-8 pt-4 shadow-xl relative'>
                 <div className='flex justify-between mt-4'>
                   <p className='text-blue-900 font-bold'>Agendamento</p>
-                  <span>{data}</span>
+                  <span>{dataTime(data)}</span>
                 </div>
                 <div className='mt-10 h-12'>
                   <h6 className='text-blue-900 font-bold'>Nome:</h6>
