@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Agenda-Online
 
-## Getting Started
+![bloggif_600eb38f71c1f](https://user-images.githubusercontent.com/52095222/105729853-0565d600-5f04-11eb-85b6-70da81ba2d71.gif)
 
-First, run the development server:
+## 🔬 Tecnologias
 
-```bash
-npm run dev
-# or
-yarn dev
+esse projeto foi desenvolvido com:
+
+- ReactJs
+- NextJs
+- JavaScript
+- Tailwindcss
+
+
+## 💻 Projeto
+
+O projeto tem como objetivo ajudar o clinete a fazer a criação de compromissos no google agenda do empreededor, apos informar o nome, data, hora e o tipo do servico, O cliente pode efetuar o agendamento. Os serviços vem direto de uma planilha do google sheets tornando essa parte do aplicativo dinamica.
+
+## 📝 Pré-requisitos:
+
+Você precisa do NodeJs e um gerenciador de dependências(NPM ou YARN) em sua maquina.
+
+### instalando as dependências:
+
+```jsx
+// instalando as dependencias:
+npm install
+// ou 
+yarn install
+
+// executando o projeto:
+npm dev
+// ou
+yarn dev 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ⚙️ Configurando o google sheet:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- crie uma planilha no seu google Sheet
+- acesse e crie uma conta no [consoledo google](console.cloud.google.com) caso não tenha.
+- crie um novo projeto
+- pesquise por Google Sheets API e adicione no seu projeto.
+- vá em credenciais, gerenciar conta de serviço e crie uma nova conta de serviço.
+- apos criada clique em ações e selecione criar chave, ele vai gerar um json.
+- apos isso no projeto crie um arquivo .env.local e preencha as variaveil de embiente conforme exemplificado no .env.example
+- Agora basta pegar o email de serviço gerado e compartilhar na planilha.
+- Apos isso é necessario o id de uma agenda do google.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 📏 Layout do figma
+para acessar o layout do projeto [click aqui](https://www.figma.com/file/zpJxwd2SnnOvStIyQlk4NJ/AgendamentoOnline?node-id=0%3A1)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 👨🏻‍💻 Author:
 
-## Learn More
+- **Sander Paniago** - [LinkedIn](https://www.linkedin.com/in/sanderpaniago) - [instagram](https://www.instagram.com/sander_paniago/)
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+link para a [demo](https://agendaonline.sanderpaniago.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🗝 licenças
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este projeto é licenciado sobre a licença MIT - [LICENSE.md](LICENSE.md) para mais informações.
