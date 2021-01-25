@@ -46,14 +46,6 @@ export default function Home({servicosList}) {
 
   return (
     <div className='bg-blue-50 w-sreen h-screen flex flex-col item-center justify-center'>
-      <header className='absolute top-0 w-full'>
-        <div className="container mx-auto flex justify-between pt-6">
-          <h2 className='text-3xl font-bold text-blue-900'>Sua Agenda Online</h2>
-          <button className='h-12 bg-blue-500 px-2 text-white font-bold rounded'>Agendamento</button>
-        </div>
-      </header>
-
-      <main>
         <div className='mt-56 md:mt-0 w-11/12 mx-auto'>
             <form onSubmit={handleSubmit} className='flex-col bg-gray-50 max-w-screen-lg shadow-lg m-auto md:flex-row flex justify-between p-8 rounded-xl'>
               <div className='w-full md:w-5/12'>
@@ -94,18 +86,19 @@ export default function Home({servicosList}) {
                 <button className='h-12 my-5 bg-blue-500 px-2 text-white font-bold rounded md:absolute md:right-6 md:bottom-4'>Confimar agendamento</button>
               </div>
             </form>
-
         </div>
-      </main>
     </div>
   )
 }
 
-Home.getInitialProps = async ({ req }) =>{
- 
+export async function getStaticProps(context){
 
-  const res = await fetch(`http://agendaonline.sanderpaniago.dev/api/get-servico`)
-   const data = await res.json()
+  const res = await fetch(`http://127.0.0.1:3000/api/get-servico`)
+  const data = await res.json()
 
-  return {servicosList: data }
+  return {
+    props: {
+      servicosList: data 
+    }
+  }
 }
