@@ -51,7 +51,7 @@ para acessar o layout do projeto [click aqui](https://www.figma.com/file/zpJxwd2
 
 ## 👨🏻‍💻 Author:
 
-- **Sander Paniago** - [LinkedIn](https://www.linkedin.com/in/sanderpaniago) - [instagram](https://www.instagram.com/sander_paniago/)
+- **Sander Paniago** - [LinkedIn](https://www.linkedin.com/in/sander-paniago/) - [instagram](https://www.instagram.com/sander_paniago/)
 
 ## 🚀 Build
 
